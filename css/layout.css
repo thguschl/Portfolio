@@ -1,0 +1,493 @@
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+ul li{
+    list-style: none;
+}
+body{
+    font-family: 'GmarketSansMedium';
+
+}
+#wrap{
+    min-width: 1400px;
+    margin: 0 auto;
+
+}
+
+/**** header ****/
+header{
+    height: 80px;
+    line-height: 80px;
+
+}
+.inner{
+    margin: 0 auto;
+    height: 100%;
+}
+#main_header{
+    position: relative;
+}
+nav{
+    position: absolute;
+    right: 10%;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+nav ul{
+    display: flex;
+}
+nav ul li{
+    padding-left: 20px;
+    font-size: 0.8rem;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+nav ul li:after{
+    content: '|';
+    padding-left: 20px;
+    color: #ddd;
+}
+nav ul li:last-child::after{
+    display: none;
+}
+
+nav ul li a:hover{
+    color: #F16439;
+}
+
+/**** main_carousel ****/
+#main_carousel{
+    height: 90vh;
+    box-sizing: border-box;
+    border-bottom: 1px solid;
+    position: relative;
+}
+.banner{
+    height: 100%;
+    background-image: url(../image/main.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+#main_carousel div:nth-child(2){
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    position: absolute;
+    bottom: 2%;
+    left: 80%;
+    animation: rotate_image 6s linear infinite;
+    transform-origin: 50% 50%;
+    background-image: url(../image/ic_next.png);
+    background-size: cover;
+    position: absolute;
+    cursor: pointer;
+}
+@keyframes rotate_image{
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* ***************** */
+h2{
+    padding: 50px 0 0 50px;
+    font-size: 1.1rem;
+    line-height: 2.5;
+    font-weight: lighter;
+}
+h1{
+    padding: 15px 50px;
+    font-size: 1.2rem;
+}
+h3{
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+}
+h4{
+    font-size: 1.2rem;
+    margin-top: 6px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+}
+.color{
+    padding: 15px 0;
+    width: 400px;
+}
+.text{
+    line-height: 1.3;
+}
+
+/* ***************** */
+
+/**** #main_about ****/
+#main_about{
+    height: 100vh;
+    height: 100vh;
+}
+
+.on_view{
+    display: flex;
+    align-items: center;
+}
+.on_view .img_about{
+    width: 50%;
+    height: 100vh;
+    background-image: url(../image/aboutme.jpg);
+    background-size: cover;
+    background-position: center center;
+    flex-shrink: 0;
+    border-right: 1px solid;
+}
+
+.on_view .con2{
+    padding-left: 100px;
+    line-height: 2.5;
+    align-items: center;
+    width: 50%;
+    font-family: 'Noto Sans KR', sans-serif;
+    
+}
+
+.con2 .name{
+    float: left;
+    padding-right: 70px;
+    font-size: 1.2rem;
+}
+.info{
+    line-height: 3;
+    font-weight: 300;
+}
+.info img{
+    width: 320px;
+}
+
+/**** #web_mamu****/
+#web_mamu{
+    height: 100vh;
+    display: flex;
+    border-top: 1px solid;
+}
+#web_mamu .content{
+    width: 50%;
+}
+
+#web_mamu .img{
+    width: 50%;
+    border-right: 1px solid;
+    position: relative;
+}
+#web_mamu .img img{
+    width: 100%;
+    position: absolute;
+    top: 20%;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+
+/* #web_yes .img ,#web_hanssem .img */
+#web_yes{
+    cursor: url(images/.cur);
+}
+
+
+#web_yes ,#web_hanssem{
+    height: 100vh;
+    display: flex;
+    border-top: 1px solid;
+}
+#web_yes .img ,#web_hanssem .img {
+    width: 50%;
+    border-right: 1px solid;
+    position: relative;
+}
+
+#web_yes .img img ,#web_hanssem .img img {
+    width: 100%;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* hover */
+#hover a::before{
+    content: "";
+    position: absolute;
+    background-color: rgb(0,0,0);
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+}
+#hover:hover a::before{
+    content: "";
+    opacity: 0.8;
+    z-index: 99;
+}
+
+#hover .p1{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    font-size: 2.3rem;
+    opacity: 0;
+}
+#hover .p1::before{
+    content: url(../image/ic_point.png);    
+}
+#hover:hover .p1{
+    opacity: 1;
+    z-index: 99;
+    transition-duration: 0.8s;
+    top: 50%;    
+}
+
+/* #web_yes .content, #web_hanssem .content*/
+.content{
+    width: 50%;
+    position: relative;
+}
+
+.content_in{
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translatey(-50%);
+}
+.content p{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 300;
+    padding: 5px 0;
+}
+.box2{
+    margin-top: 50px;
+}
+
+
+
+/**** #brand_eee ****/
+#brand_eee{
+    display: flex;
+    height: 100vh;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+}
+#brand_eee h2{
+    color: white;
+}
+
+
+#brand_eee .img{
+    position: relative;
+    width: 50%;
+    background-color: #2B7598;
+    border-right: 1px solid;
+}
+#brand_eee .img img{
+    position: absolute;
+    width: 50%;
+    top: 20%;
+    left:25%; 
+}
+#brand_eee .btn{
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#brand_eee .btn a{
+    padding: 10px 40px;
+    background-color: white;
+    border: 1px solid;
+}
+#brand_eee .btn a:hover{
+    background-color: #FF5D2C;
+    color: white;
+}
+
+
+/* .poster */
+.img_wrap{
+    background-image: url(../image/leaflet.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+}
+
+
+
+/* #poester2 */
+
+#poster2{
+    margin: 100px 0;
+}
+#poster2 h1{
+    text-align: center;
+}
+#poster2 .img{
+    width: 1500px;
+    margin: 70px auto;
+}
+
+#poster2 .color{
+    border: 1px solid;
+}
+
+#poster2 .img .img_in .multiple-items{
+    display: flex;
+    justify-content: space-between;
+}
+#poster2 .img .multiple-items div{
+    position: relative;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.color_txt{
+    text-align: center;
+    
+}
+#poster2 .img .multiple-items div img{
+    display: block;
+    width: 90%;
+    margin-top: 20px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#poster2 .img .multiple-items div p{
+    position: absolute;
+    background-color: #FF5D2C;
+    width: 100%;
+    height: 220px;
+    padding: 30px 30px;
+    box-sizing: border-box;
+    color: white;
+    transition: 1s;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.5;
+    text-align: center;
+    opacity: 0;
+}
+
+#poster2 .multiple-items>div a:hover p{
+    transform: translateY(-90px);
+    transition: 0.7s;
+    opacity: 1;
+}
+
+#poster2 .color:hover{
+    color: #FF5D2C;
+}
+
+/****** window_popup *******/
+.window{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    background-color: rgba(3,3,3,0.7);
+    display: none;
+}
+.window_content{
+    width: auto;
+    height: 100vh;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 100;
+    overflow: scroll;
+}
+
+.window_content img{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.window_content .window_in:last-child img{
+    height: auto;
+}
+.window_content .close img{
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+
+/* -- #banner -- */
+
+#banner{
+    width: 1000px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+#banner .img_slider img{
+    margin: 0 auto;
+    width: 700px;
+
+}
+
+
+
+footer{
+    background-image: url(../image/footer.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 250px;
+    border-top: 2px solid;
+}
+
+/*******quick-menu*****/
+.support{
+    background-color: white;
+    border-left: 1px solid;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    color: black;
+    font-weight: 500;
+    text-align: center;
+    width: 90px;
+    height: 60px;
+    line-height: 60px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    position: fixed;
+    right:0;
+    bottom: 10%;
+    transform: translateY(50%);
+    z-index: 100;
+}
+
+

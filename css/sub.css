@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#view ,#view2{
+    display: flex;
+}
+.img_con{
+    width: 50%;
+}
+.img_con img{
+    width: 100%;
+    display: block;
+}
+.side, .side2{
+    width: 50%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    position: fixed;
+}
+.side .img{
+    background-image: url(../image/sub1.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 100%;
+}
+.side2 .img{
+    background-image: url(../image/poster_wall.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 100%;
+}
